@@ -1,7 +1,7 @@
 {
   "users": [
-    { "id": 1, "name": "louis", "state": "0", "score": "0" },
-    { "id": 2, "name": "valentin", "state": "0", "score": "0" }
+    { "id": 1, "name": "louis", "idState": [] },
+    { "id": 2, "name": "valentin", "idState": [] },
   ],
   "states": [
     { "id": 1,
