@@ -16,9 +16,9 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, Rest
         url: '/game',
         controller: 'gameCtrl',
         resolve: {
-						message : function(ServiceRest) {
-              return UsersService.getUser(1);
-						 }
+						message : function(StatesService) {
+              return StatesService.getState(1);
+            }
 					},
         template: '{{msg}}'
       })

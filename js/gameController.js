@@ -1,5 +1,5 @@
 angular.module('myApp').controller('gameCtrl', function ($scope, message){
-  $scope.msg = message.name;
+  $scope.msg = message.body;
 });
 
 angular.module('myApp').controller('stateCtrl', function ($scope){

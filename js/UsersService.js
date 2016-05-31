@@ -1,7 +1,5 @@
 angular.module('myApp').factory('UsersService', ['Restangular', function(Restangular){
 
-  RestangularConfigurer.setBaseUrl('http://localhost:3000/');
-
   let users = Restangular.all('users');
 
   return {
