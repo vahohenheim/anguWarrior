@@ -6,10 +6,6 @@
   "author": "Louis Marie MARCADON & Valentin BOURREAU",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "watchify": "^3.7.0"
   },
   "dependencies": {
     "angular": "^1.5.5",
