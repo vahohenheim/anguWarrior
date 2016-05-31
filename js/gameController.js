@@ -1,9 +1,10 @@
-
-
-angular.module('myApp').config(function($stateProvider, $urlRouterProvider) {
+angular.module('myApp').config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
     _.contains = _.includes;
 
+    RestangularProvider.setBaseUrl('http://localhost:3000/');
+
     $urlRouterProvider.otherwise('/start');
+
     $stateProvider
       .state('start', {
         url: '/start',
@@ -11,40 +12,38 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider) {
       })
       .state('game', {
         url: '/game',
-        controller: 'appCtrl',
-        template: ''
+        controller: 'gameCtrl',
+        resolve: {
+						message : function(ServiceRest) {
+              return UsersService.getUser(1);
+						 }
+					},
+        template: '{{msg}}'
       })
       .state('state1', {
         url: '/state1',
-        controller: 'appCtrl',
+        controller: 'stateCtrl',
         template: ''
       })
       .state('state2', {
         url: '/state2',
-        controller: 'appCtrl',
+        controller: 'stateCtrl',
         template: ''
       })
       .state('state3', {
         url: '/state3',
-        controller: 'appCtrl',
+        controller: 'stateCtrl',
         template: ''
       })
       .state('end', {
         url: '/end',
-        resolve: {
-						message : function(ServiceRest) {
-              return ServiceRest.getExample();
-						 }
-					},
         controller: 'endCtrl',
         template: ''
       });
   });
 
-angular.module('myApp').controller('startCtrl', function ($scope){
-});
-
-angular.module('myApp').controller('gameCtrl', function ($scope){
+angular.module('myApp').controller('gameCtrl', function ($scope, message){
+  $scope.msg = message.name;
 });
 
 angular.module('myApp').controller('stateCtrl', function ($scope){
