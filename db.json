@@ -1,9 +1,19 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "user": [
+    { "id": 1, "name": "louis", "state": "0", "score": "0" },
+    { "id": 2, "name": "valentin", "state": "0", "score": "0" }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "state": [
+    { "id": 1,
+      "body": "Vous êtes admis à la table ronde",
+      "action": "Vous pouvez maintenant faire un choix de chevalier",
+      "score": 0,
+      "choice": [ {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5} ] },
+
+    { "id": 2,
+      "body": "Partir à la quête du Graal",
+      "action": "Vous êtes un preux chevalier, Bon courage",
+      "score": 2, 
+      "choice": [ {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5} ] },
+  ]
 }

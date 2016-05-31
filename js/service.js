@@ -4,18 +4,17 @@ angular.module('myApp').factory('ServiceRest', ['Restangular', function(Restangu
     // this is service object with list of methods in it
     // this object will be used by controller
     var service = {
-        getExamples: getExamples,
-        getExample: getExample
+        getUser: getUser,
+        getState: getState
     };
 
     // get examples from server by using Restangular
-    function getExamples(){
-        return Restangular.one('posts').getList();
+    function getUser(idUser){
+        return Restangular.one('/users/'+idUser).get();
     }
 
-    // get example with given id from server by using Restangular
-    function getExample(exampleId){
-        return Restangular.one('/posts/'+exampleId).get();
+    function getState(idState){
+      return Restangular.one('/states/'+idState).get();
     }
 
     return service;
