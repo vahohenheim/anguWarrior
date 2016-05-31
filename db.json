@@ -1,19 +1,62 @@
 {
-  "user": [
+  "users": [
     { "id": 1, "name": "louis", "state": "0", "score": "0" },
     { "id": 2, "name": "valentin", "state": "0", "score": "0" }
   ],
-  "state": [
+  "states": [
     { "id": 1,
-      "body": "Vous êtes admis à la table ronde",
+      "body": "Admis à la table ronde",
       "action": "Vous pouvez maintenant faire un choix de chevalier",
       "score": 0,
-      "choice": [ {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5} ] },
+      "choice": [ {"id": 2}, {"id": 3}, {"id": 4} ] },
 
     { "id": 2,
       "body": "Partir à la quête du Graal",
-      "action": "Vous êtes un preux chevalier, Bon courage",
-      "score": 2, 
-      "choice": [ {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5} ] },
+      "action": "Vous allez vous équipez",
+      "score": 2,
+      "choice": [ {"id": 5}, {"id": 6}, {"id": 7} ] },
+
+    { "id": 3,
+      "body": "Aller à la Taverne",
+      "action": "Vous recherchez quelqu'un d'intéressant",
+      "score": 1,
+      "choice": [ {"id": 30}, {"id": 31}, {"id": 32} ] },
+
+    { "id": 4,
+      "body": "Manger avec Karadoc",
+      "action": "Vous mangez autant que lui, vous en décédez",
+      "score": 0,
+      "choice": [ {"id": 99} ] },
+
+    { "id": 5,
+      "body": "Aller voir l'armurier",
+      "action": "Vous recevez un épée",
+      "score": 1,
+      "choice": [ {"id": 8} ] },
+
+    { "id": 6,
+      "body": "Aller voir Perceval",
+      "action": "Vous recevez une fourchette enchantée",
+      "score": 2,
+      "choice": [ {"id": 8} ] },
+
+    { "id": 7,
+      "body": "Allez voir Merlin",
+      "action": "Vous recevez une potion qui fait perdre les cheveux",
+      "score": 0,
+      "choice": [ {"id": 8} ] },
+
+    { "id": 8,
+      "body": "Rencontre avec le roi Arthur pour connaître les instructions",
+      "action": "Vous allez voir le roi Arthur pour connaître les instructions",
+      "score": 2,
+      "choice": [ {"id": 9}, {"id": 10}, {"id": 11} ] },
+
+
+    { "id": 99,
+      "body": "Vous êtes mort",
+      "action": "C'est la fin",
+      "score": 0,
+      "choice": [] }
   ]
 }

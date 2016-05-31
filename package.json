@@ -6,6 +6,7 @@
   "author": "Louis Marie MARCADON & Valentin BOURREAU",
   "license": "ISC",
   "devDependencies": {
+    "uniqid": "^3.0.0"
   },
   "dependencies": {
     "angular": "^1.5.5",
